@@ -18,7 +18,8 @@ Project instructions and project documentation ID rules take precedence. When a 
 
 - Requirements: `{FEATURE}-RQ-{NNN}`, for example `CONN-RQ-004`.
 - Functional rules: `{FEATURE}-FR-{NNN}`, for example `CONN-FR-004`.
+- For a platform-specific requirement, functional rule, or other document, insert `{PLATFORM}` after `{FEATURE}`, for example `CONN-D-RQ-004` or `CONN-D-FR-004`.
 - Screen-design detail: `{FEATURE}-{PLATFORM}-SD-{NNN}`, for example `CONN-D-SD-001`.
 - A screen-detail component: append `-{NN}` to its screen-detail ID, for example `CONN-D-SD-001-01`.
 
-Use uppercase feature and platform abbreviations. Screen overviews show only screen titles and visuals; do not assign them IDs. Start each screen-detail heading with its ID in brackets, for example `[CONN-D-SD-001] 로그인 폼`.
+Use uppercase feature and platform abbreviations. Let each project define its platform abbreviations. Screen overviews show only screen titles and visuals; do not assign them IDs. Start each screen-detail heading with its ID in brackets, for example `[CONN-D-SD-001] 로그인 폼`.
