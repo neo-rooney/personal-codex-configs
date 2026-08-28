@@ -32,7 +32,7 @@
 | --- | --- |
 | `rddd-requirements-specification` | Ruca Wiki 원칙과 프로젝트 사실을 바탕으로 요구사항 명세 작성 |
 | `rddd-screen-design` | 화면 설계서, SVG 와이어프레임, 상태별 화면과 설명 표 작성 |
-| `ruca-raw-capture` | 프로젝트의 재사용 가능한 결정·검증 결과·실패 원인 보존 |
+| `ruca-raw-capture` | 승인된 재사용 학습의 근거를 Ruca raw source로 보존 |
 | `ruca-wiki-compile` | 승인된 raw source를 Ruca의 entity·claim 지식으로 정리 |
 
 ## 새 컴퓨터 설정
@@ -115,3 +115,4 @@ git push origin main
 - 개인 지침이나 스킬 변경은 다른 컴퓨터에 반영하기 전에 commit하고 push합니다.
 - Codex가 읽는 지침과 스킬에는 비밀번호, API key, 토큰 등 비밀정보를 넣지 않습니다.
 - Ruca Vault의 실제 내용은 이 저장소에 포함하지 않습니다.
+- Ruca raw source는 자동으로 만들지 않습니다. 새로 확인한 재사용 가능한 학습과 근거를 먼저 제안하고, 사용자가 해당 기록을 명시적으로 승인한 경우에만 보존합니다.
