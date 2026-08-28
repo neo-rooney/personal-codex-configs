@@ -46,7 +46,7 @@ The Wiki governs the document's structure and writing boundaries. It does not ov
    - [form-section-example.svg](assets/form-section-example.svg)
 5. Create or edit the SVG with `apply_patch`. Preserve the design tokens and red numbered-callout system from the reference.
 6. Add the image at `width="70%"`, followed by a table mapping every callout to one meaningful UI concept.
-7. Give each screen overview a stable screen ID and screen name. Use the same ID in its detail and later test scenarios.
+7. Follow the project's document ID convention when one exists. Otherwise, leave screen overviews without IDs and distinguish multiple overviews by title; identify each screen-detail heading as `[{FEATURE}-{PLATFORM}-SD-{NNN}] {screen name}`, and append `-{NN}` for its component IDs. Use the same IDs in later test scenarios.
 8. Put exact user-visible labels, messages, icons, visibility, and visual states in the screen-design document. Link related functional rules instead of repeating their behavioral conditions.
 9. Run `scripts/validate-wireframes.sh <svg...>` and inspect every rendered preview before reporting completion.
 

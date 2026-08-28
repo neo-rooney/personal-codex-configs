@@ -41,6 +41,7 @@ The Wiki governs how to structure and write the document. It does not override p
 
 ## Requirement-writing rules
 
+- Follow the project's document ID convention when one exists. Otherwise identify requirements as `{FEATURE}-RQ-{NNN}` and retain the same IDs in related functional specifications, screen designs, and test scenarios.
 - State externally observable behavior, conditions, outcomes, and ownership. Do not turn a preferred implementation, file name, framework, or internal helper into a requirement unless it is an actual contract.
 - Do not invent protocol fields, error handling, defaults, time limits, policies, or product behavior. Mark an unknown as needing confirmation instead of guessing.
 - Keep one requirement ID focused on one responsibility. Split only when the resulting requirements can be verified independently.
