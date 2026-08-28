@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ruca Wiki Compile"
+  short_description: "Compile approved Ruca sources into formal knowledge"
+  default_prompt: "Compile this approved Ruca source into formal notes where the evidence supports it."

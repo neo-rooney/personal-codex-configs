@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">IO 편집기 개요 화면 와이어프레임</title>
+  <desc id="desc">에디터 탭, 에디터 헤더, 기본, 정보, 프로퍼티, 화면 탭 영역을 번호로 구분한 와이어프레임</desc>
+  <defs>
+    <style>
+      .page { fill: #f4f4f4; }
+      .surface { fill: #ffffff; stroke: #555555; stroke-width: 2; }
+      .subtle { fill: #e8e8e8; stroke: #777777; stroke-width: 2; }
+      .input { fill: #fafafa; stroke: #888888; stroke-width: 2; }
+      .line { stroke: #777777; stroke-width: 2; }
+      .label { fill: #222222; font-family: Arial, sans-serif; font-size: 22px; }
+      .small { fill: #444444; font-family: Arial, sans-serif; font-size: 18px; }
+      .section { fill: #222222; font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; }
+      .number { fill: #d52b2b; stroke: #ffffff; stroke-width: 4; }
+      .number-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <rect class="page" width="1400" height="900"/>
+  <rect class="surface" x="30" y="30" width="1340" height="840" rx="8"/>
+
+  <!-- Editor tab -->
+  <rect class="subtle" x="30" y="30" width="1340" height="62" rx="8"/>
+  <rect class="surface" x="55" y="42" width="245" height="50"/>
+  <rect class="input" x="72" y="56" width="28" height="24" rx="3"/>
+  <text class="small" x="82" y="75">IO</text>
+  <text class="label" x="116" y="75">MyIO</text>
+  <circle cx="275" cy="67" r="7" fill="#555555"/>
+  <circle class="number" cx="52" cy="50" r="20"/>
+  <text class="number-text" x="52" y="50">1</text>
+
+  <!-- 에디터 헤더 -->
+  <rect class="surface" x="55" y="112" width="1290" height="82"/>
+  <text class="section" x="78" y="159">com.example.MyIO(Logical Name)</text>
+  <rect class="subtle" x="475" y="132" width="285" height="38" rx="3"/>
+  <text class="small" x="495" y="157">상태 메시지</text>
+  <circle class="number" cx="1345" cy="112" r="20"/>
+  <text class="number-text" x="1345" y="112">2</text>
+
+  <!-- Basic -->
+  <rect class="surface" x="55" y="216" width="630" height="220"/>
+  <rect class="subtle" x="55" y="216" width="630" height="48"/>
+  <text class="section" x="78" y="248">⌄ 기본</text>
+  <text class="label" x="80" y="310">전체 이름</text>
+  <rect class="input" x="205" y="280" width="445" height="44" rx="3"/>
+  <text class="small" x="222" y="309">com.example.MyIO</text>
+  <text class="label" x="80" y="376">상위 타입</text>
+  <rect class="input" x="205" y="346" width="445" height="44" rx="3"/>
+  <circle class="number" cx="55" cy="216" r="20"/>
+  <text class="number-text" x="55" y="216">3</text>
+
+  <!-- Info -->
+  <rect class="surface" x="715" y="216" width="630" height="220"/>
+  <rect class="subtle" x="715" y="216" width="630" height="48"/>
+  <text class="section" x="738" y="248">⌄ 정보</text>
+  <text class="label" x="740" y="310">논리 이름</text>
+  <rect class="input" x="865" y="280" width="340" height="44" rx="3"/>
+  <text class="small" x="882" y="309">고객 정보</text>
+  <rect class="input" x="1220" y="280" width="90" height="44" rx="3"/>
+  <text class="small" x="1245" y="309">편집</text>
+  <text class="label" x="740" y="376">설명</text>
+  <rect class="input" x="865" y="346" width="340" height="68" rx="3"/>
+  <text class="small" x="882" y="379">고객 조회 결과</text>
+  <rect class="input" x="1220" y="346" width="90" height="44" rx="3"/>
+  <text class="small" x="1245" y="375">편집</text>
+  <circle class="number" cx="1345" cy="216" r="20"/>
+  <text class="number-text" x="1345" y="216">4</text>
+
+  <!-- Properties -->
+  <rect class="surface" x="55" y="458" width="1290" height="334"/>
+  <rect class="subtle" x="55" y="458" width="1290" height="58"/>
+  <text class="section" x="78" y="495">프로퍼티</text>
+  <rect class="input" x="275" y="470" width="100" height="36" rx="3"/>
+  <text class="small" x="295" y="495">이름</text>
+  <rect class="input" x="385" y="470" width="125" height="36" rx="3"/>
+  <text class="small" x="397" y="495">시작 일치</text>
+  <rect class="input" x="520" y="470" width="215" height="36" rx="3"/>
+  <text class="small" x="536" y="495">검색어</text>
+  <rect class="input" x="745" y="470" width="80" height="36" rx="3"/>
+  <text class="small" x="765" y="495">검색</text>
+  <text class="small" x="850" y="495">기본 타입 추가 :</text>
+  <rect class="input" x="1015" y="470" width="50" height="36" rx="3"/>
+  <text class="small" x="1035" y="495">1</text>
+  <rect class="input" x="1075" y="470" width="145" height="36" rx="3"/>
+  <text class="small" x="1090" y="495">String</text>
+  <rect class="input" x="1230" y="470" width="55" height="36" rx="3"/>
+  <text class="label" x="1248" y="497">+</text>
+
+  <rect class="subtle" x="70" y="536" width="1200" height="46"/>
+  <line class="line" x1="130" y1="536" x2="130" y2="770"/>
+  <line class="line" x1="285" y1="536" x2="285" y2="770"/>
+  <line class="line" x1="470" y1="536" x2="470" y2="770"/>
+  <line class="line" x1="655" y1="536" x2="655" y2="770"/>
+  <line class="line" x1="750" y1="536" x2="750" y2="770"/>
+  <line class="line" x1="855" y1="536" x2="855" y2="770"/>
+  <line class="line" x1="955" y1="536" x2="955" y2="770"/>
+  <line class="line" x1="1075" y1="536" x2="1075" y2="770"/>
+  <line class="line" x1="1270" y1="536" x2="1270" y2="770"/>
+  <line class="line" x1="70" y1="626" x2="1270" y2="626"/>
+  <line class="line" x1="70" y1="680" x2="1270" y2="680"/>
+  <line class="line" x1="70" y1="734" x2="1270" y2="734"/>
+  <text class="small" x="82" y="566">순서</text>
+  <text class="small" x="150" y="566">타입</text>
+  <text class="small" x="305" y="566">이름</text>
+  <text class="small" x="490" y="566">논리 이름</text>
+  <text class="small" x="675" y="566">길이</text>
+  <text class="small" x="770" y="566">소수점</text>
+  <text class="small" x="875" y="566">배열</text>
+  <text class="small" x="975" y="566">옵션</text>
+  <text class="small" x="1095" y="566">상태</text>
+  <rect class="input" x="1285" y="536" width="45" height="45" rx="3"/>
+  <text class="label" x="1300" y="567">−</text>
+  <rect class="input" x="1285" y="590" width="45" height="45" rx="3"/>
+  <text class="label" x="1300" y="621">↑</text>
+  <rect class="input" x="1285" y="644" width="45" height="45" rx="3"/>
+  <text class="label" x="1300" y="675">↓</text>
+  <circle class="number" cx="55" cy="458" r="20"/>
+  <text class="number-text" x="55" y="458">5</text>
+  <circle class="number" cx="55" cy="536" r="20"/>
+  <text class="number-text" x="55" y="536">6</text>
+
+  <!-- View tabs -->
+  <line class="line" x1="55" y1="824" x2="1345" y2="824"/>
+  <rect class="subtle" x="55" y="792" width="105" height="32"/>
+  <text class="small" x="83" y="815">개요</text>
+  <text class="small" x="185" y="815">소스 코드</text>
+  <circle class="number" cx="1345" cy="824" r="20"/>
+  <text class="number-text" x="1345" y="824">7</text>
+</svg>

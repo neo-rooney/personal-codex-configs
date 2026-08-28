@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screen Design Wireframe"
+  short_description: "화면 설계서용 일관된 SVG 와이어프레임 생성"
+  default_prompt: "Use $screen-design-wireframe to create an annotated screen-design wireframe and its explanation table."

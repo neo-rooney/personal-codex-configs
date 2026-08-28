@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ruca Raw Capture"
+  short_description: "Preserve reusable project learning as Ruca sources"
+  default_prompt: "Capture reusable learning from this completed project work unit in Ruca."

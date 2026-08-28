@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">IO 편집기 기본 영역 와이어프레임</title>
+  <desc id="desc">기본 영역의 섹션 헤더, 전체 이름과 상위 타입을 번호로 구분한 와이어프레임</desc>
+  <defs>
+    <style>
+      .page { fill: #f4f4f4; }
+      .surface { fill: #ffffff; stroke: #555555; stroke-width: 2; }
+      .subtle { fill: #e8e8e8; stroke: #777777; stroke-width: 2; }
+      .input { fill: #fafafa; stroke: #888888; stroke-width: 2; }
+      .label { fill: #222222; font-family: Arial, sans-serif; font-size: 24px; }
+      .value { fill: #444444; font-family: Arial, sans-serif; font-size: 22px; }
+      .section { fill: #222222; font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; }
+      .number { fill: #d52b2b; stroke: #ffffff; stroke-width: 4; }
+      .number-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <rect class="page" width="1200" height="380"/>
+  <rect class="surface" x="40" y="40" width="1120" height="300" rx="6"/>
+
+  <!-- 기본 섹션 헤더 -->
+  <rect class="subtle" x="40" y="40" width="1120" height="64" rx="6"/>
+  <text class="section" x="78" y="82">⌄ 기본</text>
+  <circle class="number" cx="50" cy="48" r="20"/>
+  <text class="number-text" x="50" y="48">1</text>
+
+  <!-- 전체 이름 -->
+  <text class="label" x="80" y="177">전체 이름</text>
+  <rect class="input" x="250" y="137" width="850" height="58" rx="4"/>
+  <text class="value" x="275" y="174">com.example.MyIO</text>
+  <circle class="number" cx="85" cy="128" r="20"/>
+  <text class="number-text" x="85" y="128">2</text>
+
+  <!-- 상위 타입 -->
+  <text class="label" x="80" y="279">상위 타입</text>
+  <rect class="input" x="250" y="239" width="850" height="58" rx="4"/>
+  <text class="value" x="275" y="276">com.example.BaseIO</text>
+  <circle class="number" cx="85" cy="230" r="20"/>
+  <text class="number-text" x="85" y="230">3</text>
+</svg>
