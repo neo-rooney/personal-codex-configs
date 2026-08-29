@@ -1,0 +1,4 @@
+interface:
+  display_name: "RDDD System Design"
+  short_description: "Draft system-design documents with current Wiki guidance"
+  default_prompt: "Use $rddd-system-design to draft a system-design document for this feature."
