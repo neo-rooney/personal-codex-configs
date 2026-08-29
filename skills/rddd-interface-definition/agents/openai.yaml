@@ -1,0 +1,4 @@
+interface:
+  display_name: "RDDD Interface Definition"
+  short_description: "Draft interface contracts with current Wiki guidance"
+  default_prompt: "Use $rddd-interface-definition to draft an interface definition for this feature."
