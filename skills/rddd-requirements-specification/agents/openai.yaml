@@ -1,4 +1,0 @@
-interface:
-  display_name: "RDDD Requirements Specification"
-  short_description: "Draft requirements specs with current Wiki guidance"
-  default_prompt: "Use $rddd-requirements-specification to draft a requirements specification for this feature."

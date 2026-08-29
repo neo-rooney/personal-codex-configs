@@ -1,0 +1,4 @@
+interface:
+  display_name: "RDDD Functional Specification"
+  short_description: "Draft functional specifications with current Wiki guidance"
+  default_prompt: "Use $rddd-functional-specification to draft a functional specification for this feature."

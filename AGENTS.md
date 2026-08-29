@@ -12,14 +12,26 @@ Use `ruca-wiki-compile` only when the user explicitly asks to compile, formalize
 
 ---
 
-# Documentation ID workflow
+# Functional specification workflow
 
-Project instructions and project documentation ID rules take precedence. When a project defines no ID rule, use these defaults consistently across its related documents:
+Project instructions and project documentation ID rules take precedence. When a project defines no feature-document rule, use these defaults consistently across its related documents:
 
-- Requirements: `{FEATURE}-RQ-{NNN}`, for example `CONN-RQ-004`.
-- Functional rules: `{FEATURE}-FR-{NNN}`, for example `CONN-FR-004`.
-- Requirements, functional rules, and other documents may be shared or platform-specific. For a platform-specific document, insert `{PLATFORM}` after `{FEATURE}`, for example `CONN-D-RQ-004` or `CONN-D-FR-004`.
-- Screen-design detail: `{FEATURE}-{PLATFORM}-SD-{NNN}`, for example `CONN-D-SD-001`.
-- A screen-detail component: append `-{NN}` to its screen-detail ID, for example `CONN-D-SD-001-01`.
+- Do not create a standalone requirements-definition document. Use a functional specification as the feature's source of truth.
+- The default functional specification sections are: document purpose, feature goals, scope (included and excluded), state definition, user flows, and functional requirements. Write `- 상태 없음` when the feature defines no state.
+- User flows describe user-visible steps only. Put internal decision rules, ownership, conditions, and outcomes in functional requirements.
+- Functional requirements use `{FEATURE}-FR-{NNN}`, for example `BO-FR-001`.
+- Functional requirements and related documents may be shared or platform-specific. For a platform-specific item, insert `{PLATFORM}` after `{FEATURE}`, for example `BO-D-FR-001`.
+- Screen-design detail uses `{FEATURE}-{PLATFORM}-SD-{NNN}`, for example `BO-D-SD-001`.
+- A screen-detail component appends `-{NN}` to its screen-detail ID, for example `BO-D-SD-001-01`.
 
-Use uppercase feature and platform abbreviations. Let each project define its platform abbreviations. Screen overviews show only screen titles and visuals; do not assign them IDs. Start each screen-detail heading with its ID in brackets, for example `[CONN-D-SD-001] 로그인 폼`.
+Use two-character uppercase feature abbreviations for new documents and let each project define its platform abbreviations. Preserve established legacy IDs until the project explicitly migrates them. Screen overviews show only screen titles and visuals; do not assign them IDs. Start each screen-detail heading with its ID in brackets, for example `[BO-D-SD-001] 로그인 폼`.
+
+---
+
+# Documentation terminology workflow
+
+Project instructions and an existing project terminology convention take precedence.
+
+- When a project maintains a shared terminology document, link every occurrence of a shared term inline. Do not add a separate terms section or table that only repeats links.
+- In Markdown documents shared through Obsidian and GitLab, write terminology headings and their fragments with hyphenated terms, for example `## 사용자-설정`, and use standard relative Markdown links with readable link text, for example `[사용자 설정](../TERMINOLOGY.md#사용자-설정)`.
+- Add a local definition only when the project requires a self-contained document or the shared terminology document does not cover the term.
