@@ -58,3 +58,4 @@ The Wiki governs how to structure and write the document. It does not override p
 
 1. This skill drafts or revises functional specifications. It does not create a standalone requirements-definition document, architecture design, implementation plan, test plan, or code unless the user separately asks.
 2. Do not modify the Ruca Vault while using this skill. Updating formal Wiki knowledge requires an explicit request and the applicable Vault workflow.
+3. When the user separately continues from a functional specification to a system-design document, read the project's participant convention. Include only elements that directly participate in the feature, and propose any participant outside the project's baseline before adding it.
