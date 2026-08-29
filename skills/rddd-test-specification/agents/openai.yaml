@@ -1,0 +1,4 @@
+interface:
+  display_name: "RDDD Test Specification"
+  short_description: "Draft test cases with current Wiki guidance"
+  default_prompt: "Use $rddd-test-specification to draft a test specification for this feature."
