@@ -32,6 +32,28 @@ The Wiki governs the document's structure and writing boundaries. It does not ov
 - Add only headings allowed by that outline. Do not add a summary, assumptions, implementation plan, appendix, or checklist on your own.
 - If a necessary concept has no permitted section, explain the conflict and propose the smallest outline change in chat. Wait for approval before modifying the outline.
 
+## Default screen-document form
+
+Use the project's format when it exists. If it does not, structure a platform section in this order:
+
+```markdown
+## {platform}
+### {n}.1 화면 개요
+#### {screen name}
+<whole-screen wireframe>
+
+### {n}.2 화면 상세
+##### {n}.2.1 {area name}
+<focused wireframe>
+###### {FEATURE}-{PLATFORM}-SD-{NNN}-{component-name}
+| 번호 | 표시내용 | 관련 요구사항 |
+```
+
+- The overview has no screen ID. It shows the normal whole-screen composition and names only the product-relevant areas.
+- A numbered detail section groups one visual area. Give an individual ID only to a component, control, or visible state that another document must reference.
+- Put the component ID immediately above its table. `번호` matches the red callout number in the detail wireframe; `관련 요구사항` links the owning functional requirement or uses `-` when none applies.
+- Use the project's feature and platform abbreviations. Do not invent abbreviations when the project has not defined them.
+
 ## Workflow
 
 1. Inspect the target functional specification, current UI code, and supplied screenshots. Treat explicit user decisions as authoritative and report material conflicts.
@@ -44,11 +66,12 @@ The Wiki governs the document's structure and writing boundaries. It does not ov
    - [annotated-overview-example.svg](assets/annotated-overview-example.svg)
    - [state-variants-example.svg](assets/state-variants-example.svg)
    - [form-section-example.svg](assets/form-section-example.svg)
-5. Create or edit the SVG with `apply_patch`. Preserve the design tokens and red numbered-callout system from the reference.
-6. Add the image at `width="70%"`, followed by a table mapping every callout to one meaningful UI concept.
-7. Follow the project's document ID convention when one exists. Otherwise, leave screen overviews without IDs and distinguish multiple overviews by title; identify each screen-detail heading as `[{FEATURE}-{PLATFORM}-SD-{NNN}] {screen name}`, and append `-{NN}` for its component IDs. Platform abbreviations are project-defined. Use the same IDs in later test scenarios.
-8. Put exact user-visible labels, messages, icons, visibility, and visual states in the screen-design document. Link related functional requirements instead of repeating their behavioral conditions.
-9. Run `scripts/validate-wireframes.sh <svg...>` and inspect every rendered preview before reporting completion.
+5. Create or edit the SVG with `apply_patch`. Preserve the design tokens and red numbered-callout system from the reference. If the user permits reuse of an existing image, copy or reference it unchanged rather than rebuilding it.
+6. Add the image at `width="70%"`. For each callout, use the project form; otherwise use the component ID and `번호` / `표시내용` / `관련 요구사항` table from the default form.
+7. Follow the project's document ID convention when one exists. Otherwise use the default form above. Platform abbreviations are project-defined. Use the same IDs in later test scenarios.
+8. Put exact user-visible labels, messages, icons, visibility, initial display source, and visible enabled, disabled, loading, empty, success, and error expressions in the screen-design document. Link related functional requirements instead of repeating their behavioral conditions.
+9. If a displayed product value must equal a protocol value, ensure the functional specification defines that consistency first, then link that requirement from the component detail.
+10. Run `scripts/validate-wireframes.sh <svg...>` and inspect every new or modified rendered SVG preview before reporting completion.
 
 ## Annotation Contract
 
@@ -64,8 +87,10 @@ The Wiki governs the document's structure and writing boundaries. It does not ov
 - In the screen overview, show the default whole-screen layout without loading, warning, or error variants. Name meaningful areas so later details refer to the same UI target.
 - Define repeating headers, inputs, loading, and error expressions once in the common-area section. In a screen detail, define only the area-specific label, value, layout, and which common state it uses.
 - Put labels, placeholders, messages, icons, and visible enabled, disabled, loading, empty, success, and error expressions in this document.
-- Put a `관련 기능 요구사항` link near a screen area when its visible state is determined by a functional requirement. Do not restate validation ranges, save conditions, retry policy, or other behavioral rules here.
+- Put a `관련 요구사항` link near a screen area when its visible state is determined by a functional requirement. Do not restate validation ranges, save conditions, retry policy, or other behavioral rules here.
 - When a project has a shared terminology document, link every occurrence of a shared term inline. Do not add a terms table that only repeats terminology links.
+- When an input's initial value comes from configuration, environment, or persisted settings, document that source or the empty state; do not turn a sketch's sample value into the product requirement.
+- Keep visible error strings and visible states here, but do not add global error-message governance or a new error category that the functional specification does not define.
 - Remove tables that merely repeat the image, functional specification, or adjacent bullets.
 
 ## Common Mistakes
@@ -74,6 +99,8 @@ The Wiki governs the document's structure and writing boundaries. It does not ov
 | ------- | ---------- |
 | Numbering labels and values separately | Combine them into one semantic field |
 | Copying a full screenshot into every detail | Crop conceptually with a focused SVG detail |
+| Giving an ID to an overview or area heading | Give IDs only to individually referenceable components or visible states |
+| Writing a sample input value as the initial-value requirement | State the actual configuration source or empty state and link its functional requirement |
 | Repeating standard platform UI | Document only the product-relevant behavior |
 | Mixing inline input errors with header validation | Classify by persistence and actual display location |
 | Writing exact messages in every specification | Keep exact strings in the screen-design document |
