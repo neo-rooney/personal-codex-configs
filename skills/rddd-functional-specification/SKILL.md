@@ -35,7 +35,7 @@ The Wiki governs how to structure and write the document. It does not override p
 ## Workflow
 
 1. Identify the document's purpose, feature boundary, and authoritative project sources.
-2. Establish included and excluded scope before defining functional requirements. Define exclusions as responsibility boundaries: include only behavior that could reasonably be mistaken for this feature but belongs to another responsibility. Do not use exclusions as an inventory of features planned for later.
+2. Establish included and excluded scope before defining functional requirements. Define exclusions as responsibility boundaries: include only behavior that could reasonably be mistaken for this feature but belongs to another responsibility. Do not use exclusions as an inventory of features planned for later or of self-evident external-system implementation responsibilities.
 3. Settle ambiguous terms before using them in the feature goals, scope, or functional requirements. When the project has a shared terminology document, link every occurrence of each shared term inline; do not add a terms section that only repeats links. Add a local terms section only when required by the project's canonical outline or when a local definition is necessary.
 4. Define the feature's state only when it has a meaningful stored or transitioned state. Otherwise record `상태 없음`.
 5. Describe only user-visible flows in `사용자 흐름`; place internal conditions, decisions, and ownership in functional requirements.
