@@ -35,3 +35,13 @@ Project instructions and an existing project terminology convention take precede
 - When a project maintains a shared terminology document, link every occurrence of a shared term inline. Do not add a separate terms section or table that only repeats links.
 - In Markdown documents shared through Obsidian and GitLab, write terminology headings and their fragments with hyphenated terms, for example `## 사용자-설정`, and use standard relative Markdown links with readable link text, for example `[사용자 설정](../TERMINOLOGY.md#사용자-설정)`.
 - Add a local definition only when the project requires a self-contained document or the shared terminology document does not cover the term.
+
+---
+
+# Feature documentation workflow
+
+Project instructions, document outlines, and document-ID conventions take precedence.
+
+- Treat a feature's functional specification as the source of truth for its behavior. Before drafting a related screen design, system design, interface definition, or test specification, read that functional specification and the feature index when present.
+- Preserve a project's numbered heading hierarchy. Use hyphenated document IDs and heading fragments when they are used as Markdown link targets.
+- Keep each document within its responsibility: functional specifications define behavior, screen designs define visible expressions, system designs define participant flow, interface definitions define contracts, and test specifications define regression cases.

@@ -23,6 +23,7 @@ Draft test-specification documents that make functional requirements executable 
 4. A functional requirement can have many test cases. Link every case to the requirement it proves; an interface definition describes the contract used by a case and is not a separate requirement to test.
 5. State concrete inputs and observable expected values. Do not write an implementation action such as “a method is called” as the expected result when a returned, stored, or displayed value can be asserted.
 6. Do not create a case for an unspecified absence, error, validation rule, or fallback. First add the expected behavior to the functional specification or ask the user to decide it.
+7. For a host-provided initial value, keep the host retrieval-and-return case separate from the GUI mapping-and-display case. Verify values the user can observe or later act on, not static layout alone.
 
 ## Validation layers
 

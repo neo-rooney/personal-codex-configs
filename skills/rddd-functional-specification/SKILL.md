@@ -31,6 +31,7 @@ The Wiki governs how to structure and write the document. It does not override p
 4. Write `- 상태 없음` when the feature does not define a state.
 5. Add only headings allowed by that outline. Do not add a summary, assumptions, appendix, checklist, design section, or other helpful-looking section on your own.
 6. If a necessary concept has no permitted section, explain the conflict and propose the smallest outline change in chat. Wait for approval before modifying the outline.
+7. Preserve a project's numbered heading hierarchy when one exists, including its heading levels and anchor-friendly hyphenated IDs.
 
 ## Workflow
 

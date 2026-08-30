@@ -51,7 +51,7 @@ Use the project's format when it exists. If it does not, structure a platform se
 
 - The overview has no screen ID. It shows the normal whole-screen composition and names only the product-relevant areas.
 - A numbered detail section groups one visual area. Give an individual ID only to a component, control, or visible state that another document must reference.
-- Put the component ID immediately above its table. `번호` matches the red callout number in the detail wireframe; `관련 요구사항` links the owning functional requirement or uses `-` when none applies.
+- Put the component ID as a sixth-level heading immediately below its focused wireframe and above its table. `번호` matches the red callout number in the detail wireframe; `관련 요구사항` links the owning functional requirement or uses `-` when none applies.
 - Use the project's feature and platform abbreviations. Do not invent abbreviations when the project has not defined them.
 
 ## Workflow

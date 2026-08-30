@@ -11,8 +11,11 @@
 ├── AGENTS.md
 ├── README.md
 └── skills/
-    ├── rddd-requirements-specification/
+    ├── rddd-functional-specification/
+    ├── rddd-interface-definition/
     ├── rddd-screen-design/
+    ├── rddd-system-design/
+    ├── rddd-test-specification/
     ├── ruca-raw-capture/
     └── ruca-wiki-compile/
 ```
@@ -30,8 +33,11 @@
 
 | 스킬 | 용도 |
 | --- | --- |
-| `rddd-requirements-specification` | Ruca Wiki 원칙과 프로젝트 사실을 바탕으로 요구사항 명세 작성 |
+| `rddd-functional-specification` | 기능 목표·범위·상태·사용자 흐름·기능 요구사항 작성 |
+| `rddd-system-design` | 참여 요소의 책임과 시스템 흐름 작성 |
+| `rddd-interface-definition` | 공통 데이터 형식과 플랫폼 간 통신 계약 작성 |
 | `rddd-screen-design` | 화면 설계서, SVG 와이어프레임, 상태별 화면과 설명 표 작성 |
+| `rddd-test-specification` | 기능 요구사항을 단위·통합·E2E 회귀 테스트 케이스로 작성 |
 | `ruca-raw-capture` | 승인된 재사용 학습의 근거를 Ruca raw source로 보존 |
 | `ruca-wiki-compile` | 승인된 raw source를 Ruca의 entity·claim 지식으로 정리 |
 
