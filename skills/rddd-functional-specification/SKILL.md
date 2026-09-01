@@ -1,32 +1,25 @@
 ---
 name: rddd-functional-specification
-description: "Draft or revise software functional specifications using the current Ruca Wiki principles and project sources of truth. Use for feature goals, scope, states, user flows, functional requirements, and functional IDs; not for standalone requirements definitions, design, or implementation plans."
+description: "Draft or revise self-contained software functional specifications using project sources of truth. Use for feature goals, scope, states, user flows, functional requirements, and functional IDs; not for standalone requirements definitions, design, or implementation plans."
 ---
 
 # RDDD Functional Specification
 
-Create functional specifications whose structure and writing rules follow the current personal Ruca Wiki, while treating the active project's sources of truth as authoritative for product facts.
+Create functional specifications with the rules in this skill, while treating the active project's sources of truth as authoritative for product facts.
 
-## Authority and current guidance
+## Authority
 
-1. Read the active global Codex instructions and resolve the current Ruca Vault location from them. Do not hard-code a Vault path in this skill.
-2. Read the resolved Vault's `AGENTS.md`, `SCHEMA.md`, and `index.md`.
-3. Use `index.md` to locate and read only the formal notes directly related to functional specifications, such as their principles, canonical outline, scope definition, terminology, state definitions, user flows, functional requirements, or document-ID rules.
-4. Apply the current Wiki guidance every time. Do not copy its outline or rules into a project document or rely on a previous invocation's version.
-5. If the Vault path or required guidance cannot be resolved, say what is unavailable and ask for the missing direction before drafting or restructuring a functional specification.
-
-For the specification's facts and decisions, use this priority order:
+For the specification's facts, decisions, structure, and document IDs, use this priority order:
 
 1. The user's current instructions
 2. The active project's SoT, product contracts, and verified implementation evidence
-3. The Ruca Wiki's general documentation principles
+3. The default rules in this skill
 
-The Wiki governs how to structure and write the document. It does not override project-specific scope, contracts, or user decisions.
+Project-specific rules override these defaults. Do not require, resolve, or read a personal knowledge vault to draft a functional specification.
 
 ## Canonical outline
 
-1. Determine the canonical outline from the current Wiki guidance before drafting.
-2. When the user provides a document or a fixed outline, preserve it unless the user explicitly requests an outline change. Treat it as the project-level application of the Wiki rule.
+1. When the user provides a document or a fixed outline, preserve it unless the user explicitly requests an outline change.
 3. When a project has no established outline, use: `문서 목적`, `기능 목표`, `기능 범위` (포함 범위와 제외 범위), `상태 정의`, `사용자 흐름`, `기능 요구사항`.
 4. Write `- 상태 없음` when the feature does not define a state.
 5. Add only headings allowed by that outline. Do not add a summary, assumptions, appendix, checklist, design section, or other helpful-looking section on your own.
@@ -58,5 +51,4 @@ The Wiki governs how to structure and write the document. It does not override p
 ## Boundaries
 
 1. This skill drafts or revises functional specifications. It does not create a standalone requirements-definition document, architecture design, implementation plan, test plan, or code unless the user separately asks.
-2. Do not modify the Ruca Vault while using this skill. Updating formal Wiki knowledge requires an explicit request and the applicable Vault workflow.
-3. When the user separately continues from a functional specification to a system-design document, read the project's participant convention. Include only elements that directly participate in the feature, and propose any participant outside the project's baseline before adding it.
+2. When the user separately continues from a functional specification to a system-design document, read the project's participant convention. Include only elements that directly participate in the feature, and propose any participant outside the project's baseline before adding it.
