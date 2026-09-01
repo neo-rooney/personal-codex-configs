@@ -1,6 +1,6 @@
 ---
 name: rddd-functional-specification
-description: "Draft or revise self-contained software functional specifications using project sources of truth. Use for feature goals, scope, states, user flows, functional requirements, and functional IDs; not for standalone requirements definitions, design, or implementation plans."
+description: "Draft or revise self-contained software functional specifications using project sources of truth. Use for document purpose, scope, states, user flows, functional requirements, and functional IDs; not for standalone requirements definitions, design, or implementation plans."
 ---
 
 # RDDD Functional Specification
@@ -20,7 +20,7 @@ Project-specific rules override these defaults. Do not require, resolve, or read
 ## Canonical outline
 
 1. When the user provides a document or a fixed outline, preserve it unless the user explicitly requests an outline change.
-3. When a project has no established outline, use: `문서 목적`, `기능 목표`, `기능 범위` (포함 범위와 제외 범위), `상태 정의`, `사용자 흐름`, `기능 요구사항`.
+3. When a project has no established outline, use: `문서 목적`, `기능 범위` (포함 범위와 제외 범위), `상태 정의`, `사용자 흐름`, `기능 요구사항`. Add `기능 목표` only when it describes a feature outcome distinct from the document purpose.
 4. Write `- 상태 없음` when the feature does not define a state.
 5. Add only headings allowed by that outline. Do not add a summary, assumptions, appendix, checklist, design section, or other helpful-looking section on your own.
 6. If a necessary concept has no permitted section, explain the conflict and propose the smallest outline change in chat. Wait for approval before modifying the outline.
@@ -30,7 +30,7 @@ Project-specific rules override these defaults. Do not require, resolve, or read
 
 1. Identify the document's purpose, feature boundary, and authoritative project sources.
 2. Establish included and excluded scope before defining functional requirements. Define exclusions as responsibility boundaries: include only behavior that could reasonably be mistaken for this feature but belongs to another responsibility. Do not use exclusions as an inventory of features planned for later or of self-evident external-system implementation responsibilities.
-3. Settle ambiguous terms before using them in the feature goals, scope, or functional requirements. When the project has a shared terminology document, link every occurrence of each shared term inline; do not add a terms section that only repeats links. Add a local terms section only when required by the project's canonical outline or when a local definition is necessary.
+3. Settle ambiguous terms before using them in the document purpose, scope, or functional requirements. When the project has a shared terminology document, link every occurrence of each shared term inline; do not add a terms section that only repeats links. Add a local terms section only when required by the project's canonical outline or when a local definition is necessary.
 4. Define the feature's state only when it has a meaningful stored or transitioned state. Otherwise record `상태 없음`.
 5. Describe only user-visible flows in `사용자 흐름`; place internal conditions, decisions, and ownership in functional requirements.
 6. List functional-requirement IDs and titles before expanding them when the user is still deciding the boundary.

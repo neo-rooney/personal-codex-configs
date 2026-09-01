@@ -17,7 +17,7 @@ Use `ruca-wiki-compile` only when the user explicitly asks to compile, formalize
 Project instructions and project documentation ID rules take precedence. When a project defines no feature-document rule, use these defaults consistently across its related documents:
 
 - Do not create a standalone requirements-definition document. Use a functional specification as the feature's source of truth.
-- The default functional specification sections are: document purpose, feature goals, scope (included and excluded), state definition, user flows, and functional requirements. Write `- 상태 없음` when the feature defines no state.
+- The default functional specification sections are: document purpose, scope (included and excluded), state definition, user flows, and functional requirements. Add feature goals only when they express an outcome distinct from the document purpose. Write `- 상태 없음` when the feature defines no state.
 - User flows describe user-visible steps only. Put internal decision rules, ownership, conditions, and outcomes in functional requirements.
 - Functional requirements use `{FEATURE}-FR-{NNN}`, for example `BO-FR-001`.
 - Functional requirements and related documents may be shared or platform-specific. For a platform-specific item, insert `{PLATFORM}` after `{FEATURE}`, for example `BO-D-FR-001`.
