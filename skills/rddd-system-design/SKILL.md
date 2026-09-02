@@ -36,6 +36,7 @@ Create focused system-design documents from an approved functional specification
 3. Do not include a participant or external interaction that is outside the current functional scope.
 4. Do not add prose that merely repeats the diagram.
 5. Describe platform-neutral responsibilities and transferred values in the diagram. Keep concrete framework APIs and internal helper names out unless they are an approved interface contract.
+6. When an `alt` branch has a short failure path and a longer success path, place the failure path first and the success path after `else`, unless time order requires otherwise. This keeps the continuing flow visually compact.
 
 ## Boundaries
 
