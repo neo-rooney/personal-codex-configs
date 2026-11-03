@@ -1,47 +1,23 @@
-# Personal knowledge workflow
+<!-- BEGIN ruca-project-skills -->
+## Ruca 프로젝트 스킬 연결
 
-Ruca vault: `/Users/rooney/Library/Mobile Documents/iCloud~md~obsidian/Documents/ruca`
+- 아래 작업을 지시받으면 실제 실행 기기의 `${CODEX_HOME:-~/.codex}/ruca.json`에서 `vaultPath`를 읽고, `<vaultPath>/AGENTS.md`와 해당 프로젝트 `SKILL.md`를 새로 읽는다. 회사 저장소에서 작업 중이어도 이 개인 경로로 공통 원본을 참조하며 공유 회사 저장소 지침에는 추가하지 않는다.
+- 사용자가 위임한 개발·수정·분석·테스트·리뷰 업무의 원본 기록은 `<vaultPath>/.codex/skills/worklog-to-ruca/SKILL.md`를 따른다. 의미 있는 진행·최종 결과를 보고하기 전에 같은 작업의 기록을 갱신한다. 업무와 무관한 개인 대화나 단순 Q&A는 자동 기록하지 않는다.
+- 영상·링크·생각의 명시적 수집·기록·저장 요청은 `<vaultPath>/.codex/skills/capture-to-ruca/SKILL.md`를 따른다. 단순 링크 공유·질문·예시 인용·일반 대화는 자동 저장하지 않는다.
+- 사용자가 스크럼 작성·갱신을 요청하면 `<vaultPath>/.codex/skills/prepare-scrum-from-worklogs/SKILL.md`를 읽는다. 요청 없이 보고서나 예약을 만들지 않는다.
+- 프로젝트 회고·갱신 요청이나 사용자가 승인한 월간 예약 실행에는 `<vaultPath>/.codex/skills/update-projects-from-worklogs/SKILL.md`를 읽는다. 완료된 작업만 집계하며 매 업무 기록마다 프로젝트를 실시간 갱신하지 않는다.
+- 본문 양식과 기록·검증 절차는 볼트 지침·템플릿·프로젝트 스킬에만 둔다. 스킬의 유일한 편집 원본은 ruca의 `.codex/skills`이며 사용자 스킬 링크는 발견을 위한 참조다. 경로·원본이 없거나 접근할 수 없으면 미저장과 정확한 차단 사유를 알리고 대체 볼트나 경쟁 원본을 만들지 않는다.
+<!-- END ruca-project-skills -->
 
-When existing personal knowledge materially helps a project task, search the Ruca `index.md` and only the related formal notes before relying on it.
+## Git 작업 기본 절차
 
-Do not create Ruca raw sources automatically. When work reveals a reusable, evidence-backed learning—such as an unexpected failure cause, a repeatable mechanism, a non-obvious trade-off, or a reusable diagnostic procedure—first propose a raw capture with its learning and evidence. Create it only after the user explicitly approves that specific capture.
+Git 저장소의 구현이나 수정 작업을 위임받으면, 사용자가 별도 범위를 지정하지 않는 한 다음 로컬 절차를 끝까지 수행한다. 아래 브랜치 생성, 커밋, 로컬 병합과 정리는 기본 위임 범위이므로 단계마다 진행 여부나 마무리 방식을 다시 묻지 않는다. 확인, 분석, 계획 또는 읽기만 요청한 경우에는 변경 작업을 시작하지 않는다.
 
-Ordinary implementation, file moves, refactoring, visual adjustment, routine test/build results, and one-off product choices are not raw-capture candidates. A request to complete project work or a prior capture approval does not authorize a new raw source.
+1. **작업 브랜치 분리:** 프로젝트 지침에서 대상 브랜치와 이름 규칙을 확인하고 최신 기준에서 작업 브랜치를 만든다. 규칙이 없으면 `codex/<작업명>`을 사용한다.
+2. **작업과 패치 노트:** 구현, 필요한 문서와 관련 검증을 완료하고 사용자에게 영향을 주는 변경은 프로젝트가 정한 패치 노트에 반영한다.
+3. **작업 커밋:** 프로젝트의 커밋 형식에 맞춰 이유, 수정 내용과 검증 결과를 기록한다. 하나의 목적은 가능한 한 하나의 작업 커밋으로 정리하고, 독립적으로 검토할 필요가 있는 기능이나 패키지 변경만 나눈다. 기존 사용자의 미커밋 변경을 함께 커밋하지 않는다.
+4. **규칙에 맞춘 로컬 병합:** 최신 병합 대상에 리베이스하고 영향을 받는 범위를 검증한 뒤 프로젝트 규칙에 따라 로컬 대상 브랜치에 병합한다. 동기화 브랜치 등 프로젝트가 정한 리베이스 예외는 유지한다. `--no-ff` 규칙이 있으면 반드시 병합 커밋을 만들고 부모 2개와 병합 결과를 확인한다.
+5. **병합 브랜치 정리:** 로컬 대상 브랜치에 작업 커밋이 모두 포함됐는지 확인하고, 다른 worktree에서 사용하지 않는 이번 작업 브랜치를 `git branch -d`로 삭제한다. 원격 push 여부를 로컬 정리의 조건으로 삼지 않는다. 완료 보고에는 대상 브랜치, 커밋, 검증 결과와 정리 상태를 남긴다.
+6. **push는 사용자 담당:** 에이전트는 `git push`를 실행하지 않는다. 작업 및 대상 브랜치, 태그, 원격 브랜치 삭제를 위한 push도 포함한다. 프로젝트 문서나 스킬에 push 단계가 있어도 사용자 단계로 남긴다. 최신 상태 확인과 리베이스를 위한 fetch, 조회 및 프로젝트 규칙에 맞는 최신화는 수행할 수 있다.
 
-Use `ruca-wiki-compile` only when the user explicitly asks to compile, formalize, or update Ruca Wiki knowledge. When reading or writing the vault, its `AGENTS.md` and `SCHEMA.md` take precedence.
-
----
-
-# Functional specification workflow
-
-Project instructions and project documentation ID rules take precedence. When a project defines no feature-document rule, use these defaults consistently across its related documents:
-
-- Do not create a standalone requirements-definition document. Use a functional specification as the feature's source of truth.
-- The default functional specification sections are: document purpose, scope (included and excluded), state definition, user flows, and functional requirements. Add feature goals only when they express an outcome distinct from the document purpose. Write `- 상태 없음` when the feature defines no state.
-- User flows describe user-visible steps only. Put internal decision rules, ownership, conditions, and outcomes in functional requirements.
-- Functional requirements use `{FEATURE}-FR-{NNN}`, for example `BO-FR-001`.
-- Functional requirements and related documents may be shared or platform-specific. For a platform-specific item, insert `{PLATFORM}` after `{FEATURE}`, for example `BO-D-FR-001`.
-- Screen-design detail uses `{FEATURE}-{PLATFORM}-SD-{NNN}`, for example `BO-D-SD-001`.
-- A screen-detail component appends `-{NN}` to its screen-detail ID, for example `BO-D-SD-001-01`.
-
-Use two-character uppercase feature abbreviations for new documents and let each project define its platform abbreviations. Preserve established legacy IDs until the project explicitly migrates them. Screen overviews show only screen titles and visuals; do not assign them IDs. Start each screen-detail heading with its ID in brackets, for example `[BO-D-SD-001] 로그인 폼`.
-
----
-
-# Documentation terminology workflow
-
-Project instructions and an existing project terminology convention take precedence.
-
-- When a project maintains a shared terminology document, link every occurrence of a shared term inline. Do not add a separate terms section or table that only repeats links.
-- In Markdown documents shared through Obsidian and GitLab, write terminology headings and their fragments with hyphenated terms, for example `## 사용자-설정`, and use standard relative Markdown links with readable link text, for example `[사용자 설정](../TERMINOLOGY.md#사용자-설정)`.
-- Add a local definition only when the project requires a self-contained document or the shared terminology document does not cover the term.
-
----
-
-# Feature documentation workflow
-
-Project instructions, document outlines, and document-ID conventions take precedence.
-
-- Treat a feature's functional specification as the source of truth for its behavior. Before drafting a related screen design, system design, interface definition, or test specification, read that functional specification and the feature index when present.
-- Preserve a project's numbered heading hierarchy. Use hyphenated document IDs and heading fragments when they are used as Markdown link targets.
-- Keep each document within its responsibility: functional specifications define behavior, screen designs define visible expressions, system designs define participant flow, interface definitions define contracts, and test specifications define regression cases.
+사용자가 커밋, 병합 또는 정리 전에 검토를 요청하거나 작업 범위를 제한하면 그 지시를 우선한다. 기존 미커밋 변경과 다른 작업의 브랜치 및 worktree를 보존하며, 분리된 작업 공간을 우선 사용한다. 위 절차를 맞추려고 다른 작업을 임의로 초기화하거나 포함하지 않는다.
